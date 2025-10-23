@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Mini Battlezone (Retro)</title>
+<link rel="stylesheet" href="CSS/estilos.css">
+</head>
+<body>
+<header>
+  <h1>🟢 Mini Battlezone — Retro Tank</h1>
+  <div id="uiTop">
+    <div class="hud" id="scoreHud">Puntos: 0</div>
+    <div class="hud" id="livesHud">Vidas: 3</div>
+    <div class="hud small">Controles: A/D o ←/→ girar • W/S o ↑/↓ avanzar/retroceder • Click/Space disparar • Mouse: apuntar torreta</div>
+    <button id="muteBtn">🔈 Sonidos: Off</button>
+  </div>
+</header>
+
+<div id="canvasWrap">
+  <canvas id="gameCanvas" width="900" height="600"></canvas>
+  <div class="panel">
+    <div class="hud" id="waveHud">Enemigos: 0</div>
+    <div class="hud" id="statusHud">Estado: Listo</div>
+  </div>
+</div>
+
+<div id="overlay">
+  <div id="startScreen" style="pointer-events:auto;">
+    <div class="card" id="cardWelcome">
+      <h2 style="margin:0">Mini Battlezone</h2>
+      <p class="small">Versión reducida inspirada en el clásico. Derriba tanques enemigos y sobrevive.</p>
+      <div style="display:flex;gap:10px;margin-top:10px">
+        <button id="startBtn">Iniciar Juego</button>
+        <button id="tutorialBtn">Cómo Jugar</button>
+      </div>
+    </div>
+    <div class="card" id="cardTutorial" style="display:none;max-width:720px">
+      <strong>Controles</strong>
+      <ul class="small">
+        <li>W / Flecha Arriba: avanzar</li>
+        <li>S / Flecha Abajo: retroceder</li>
+        <li>A / Izquierda : girar izquierda</li>
+        <li>D / Derecha : girar derecha</li>
+        <li>Mouse: apuntar torreta</li>
+        <li>Click izquierdo o Space: disparar</li>
+      </ul>
+      <div style="display:flex;gap:10px;margin-top:8px">
+        <button id="backBtn">Volver</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>Hecho con Canvas • Estilo retro vectorial</footer>
+
+<script src="JS/script.js"></script>
+</body>
+</html>
